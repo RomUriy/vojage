@@ -1,4 +1,4 @@
-# vojage
+# Vojage
 One page website.
 
 ### Live preview --> [Vojage](https://romuriy.github.io/vojage/)
