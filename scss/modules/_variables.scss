@@ -1,0 +1,42 @@
+%message {
+  float: left;
+  width: 310px;
+  border: 1px solid #f7f8fa;
+  background-color: #F1F1F1;
+  padding: 20px 20px 20px;
+  border-radius: 5px;
+  position: relative;
+  border-bottom: 3px solid #D1D1D1;
+  p {
+    color: #8e8e8e;
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+}
+
+$color_gray: gray;
+$color_blue: #0199e6;
+$mobile-width: 376px;
+$mobile-width-turn-around: 668px;
+$tablet-width: 769px;
+$tablet-width-turn-around: 1025px;
+
+
+%circle {
+  border: 1px solid $color_blue;
+  background-color: $color_blue;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  margin-right: 10px;
+  cursor: pointer;
+
+  &:hover{
+   background-color: rgba(0, 120, 201, 0.3);
+  }
+
+}

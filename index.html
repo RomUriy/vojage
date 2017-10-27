@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Voyage</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="images/plane.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css">
+  <link rel="stylesheet" href="jQuery/jquery-ui.min.css">
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+  <!-- <script src="js/jquery.js"></script> -->
+
+</head>
+<body>
+
+
+<!--
+  <?php
+
+  define('MY_NAME', 'Roman');
+  define('MY_MAIL', 'roman@example.com');
+
+  include('./class.phpmailer.php');
+
+  if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
+    if ( isset( $_POST['name'] )
+    && isset( $_POST['email'] )
+    && isset( $_POST['subject'] )
+    && isset( $_POST['message'] )){
+
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $subject = $_POST['subject'];
+      $message = $_POST['message'];
+
+      $mail = new PHPMailer();
+      $mail->isHTML(FALSE);
+      $mail->Subject = $subject;
+      $mail->Message = $message;
+      $mail->addAddress(MY_MAIL, MY_NAME);
+      $mail->From = $email;
+      $mail->FromName = $name;
+
+      $result = $mail->send();
+
+      if( $result ){
+        $msg = urlencode( 'Email zostal wyslany' );
+        $res = 1; //"ok"
+      } else {
+        $msg = urlencode( 'Email nie byl wyslany' );
+        $res = 0; //"error"
+      }
+
+      $url = "index.php?res=$res&msg=$msg#contact";
+
+      header("Location: $url");
+    }
+  }
+  ?> -->
+
+
+
+  <header id="menu">
+    <div class="container clearfix">
+
+
+      <div class="logo">VOYAGE</div>
+
+      <!-- menu button -->
+      <div class="three_linii">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+      </div>
+      <div class="volume">
+        <i class="fa fa-volume-up" aria-hidden="true"></i>
+        <i class="fa fa-volume-off" aria-hidden="true"></i>
+      </div>
+      <nav>
+        <ul class="menu_main">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#brief">BRIEF</a></li>
+          <li><a href="#features">FEATURES</a></li>
+          <li><a href="#recent_tours">TOURS</a></li>
+          <li><a href="#testimonial">TESTIMONIAL</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="arrow">
+        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+      </div>
+
+      <!-- Menu mobile -->
+      <div class="header">
+        <div class="name">
+          <h1>Travelo</h1>
+        </div>
+        <div class="cancel">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <nav>
+          <ul class="menu_mobile">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#brief">Brief</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#recent_tours">Tours</a></li>
+            <li><a href="#testimonial">Testimoial</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+
+  </div>
+
+
+</header>
+<section id="home">
+  <div class="bgvideo">
+    <video autoplay loop class="bgvideo" id="bgvideo">
+      <source src="video/livealohamp4.mp4" type="video/mp4"></source>
+    </video>
+    <div class="background">
+      <img src="images/background.jpg"/>
+    </div>
+
+    <div class="all_home">
+      <div class="main_text">
+        <h2 class="wow bounceInDown">Plan and <span>Book</span> Your Perfect Trip</h2>
+      </div>
+      <div class="container clearfix form">
+        <form>
+          <div class="depature">
+            <p>From</p>
+            <input type="text" name="from" placeholder="Type Depature City">
+            <p>To</p>
+            <input type="text" name="to" placeholder="Type Depature City"><br><br>
+          </div>
+          <div class="dates">
+            <div class="img1">
+              <p>Depature</p>
+              <input type="text" class="datepicker" name="date" placeholder="14/09/2016">
+              <img src="images/calendar1.png"/>
+            </div>
+            <div class="img2">
+              <p>Arrival</p>
+              <input type="text" class="datepicker" name="date" placeholder="21/09/2016">
+              <img src="images/calendar1.png"/>
+            </div>
+          </div>
+          <div class="class_type">
+            <p>Class</p>
+            <select class="class">
+              <option value="Economy">Economy</option>
+              <option value="Business">Business</option>
+              <option value="First_Class">First Class</option>
+              <option value="Premium_Economy">Premium Economy</option>
+            </select><br>
+            <input class="button "type="button" name="name" value="Book Now">
+          </div>
+        </form>
+
+
+      </div>
+      <!-- Booking here -->
+      <div class="button_mobile">
+        <button type="button" name="button">Booking here</button>
+      </div>
+
+      <div class="mobile_booking">
+        <div class="close">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <div class="booking_form">
+          <form>
+            <input type="text" name="depature" placeholder="Type Depature City">
+            <input type="text" name="destination" placeholder="Type Depature City">
+            <input type="text" name="date_to" placeholder="12/08/2016">
+            <input type="text" name="date_from" placeholder="23/08/2016">
+            <input type="submit" value="BOOK NOW">
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+<section id="brief">
+  <div class="images container clearfix">
+    <div class="photo_1 wow fadeInLeft" data-wow-delay="0.5s">
+      <img src="images/photo_1.jpg">
+      <div class="text">
+        <h1>TRAVEL DOCUMENTS</h1>
+      </div>
+      <div class="article">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+    <div class="photo_2 wow fadeInRight"  data-wow-delay="0.5s">
+      <img src="images/photo_2.jpg">
+      <div class="text">
+        <h1>Describe what we are Provide</h1>
+      </div>
+      <div class="article">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="features">
+  <div class="container clearfix">
+    <div class="title">
+      <h1>Features</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="features_section container">
+      <div class="left_side">
+        <img class="wow bounceIn" data-wow-delay="0.5s" src="images/documents.png">
+        <h1>Easy to Customize</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <img class="wow bounceIn" data-wow-delay="0.5s"  src="images/papers.png">
+        <h1>Visa Support</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="right_side">
+        <img class="wow bounceIn" data-wow-delay="0.5s"  src="images/backpack.png">
+        <h1>Travel Documents</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <img class="wow bounceIn" data-wow-delay="0.5s"  src="images/message.png">
+        <h1>Consultation</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="video">
+  <div class="container clearfix">
+    <div class="title">
+      <h1>Watch Video</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="video_section container">
+      <div class="left_side">
+        <h1>Lorem ipsum dolor sit amet, consectetur a maximus metus semper et.</h1>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue gravida ex, a maximus metus semper et. Curabitur non enim pharetra, dictum tortor quis, hendr erit tortor.</h3>
+        <p>Maecenas finibus quis nulla id facilisis. Aenean dignissim<br>magna et est elit porttitor gravida lacinia. Fusce elementum massa at eros lacinia imperdiet. Aenean mollis ultricies dictum.Praesent suscipit urna eget elit porttitor mollis. Quisque mollis rhoncus ante, eu interdum quam vehicula cursus. Nam bibendum odio eu sem semper posuere. Fusce elementum massa at eros lacinia imperdiet. Aenean mollis ultricies dictum.Fusce elementum massa at eros lacinia imperdiet. Aenean mollis ultricies dictum. Fusce elementum massa at eros lacinia imperdiet. Aenean mollis ultricies dictum.</p>
+      </div>
+      <div class="right_side">
+        <img src="images/snow.jpg"/>
+        <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+      </div>
+      <div class="youtube">
+        <div class="border">
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/0uGETVnkujA" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="close_page">
+            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<section id="recent_tours">
+  <div class="container clearfix">
+    <div class="title">
+      <h1>Recent Tours</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="slider container">
+      <ul>
+        <li><img src="images/1.jpg" width="350" height="350" /></li>
+        <li><img src="images/2.jpg" width="350" height="350"/></li>
+        <li><img src="images/3.jpg" width="350" height="350"/></li>
+        <li><img src="images/4.jpg" width="350" height="350"/></li>
+        <li><img src="images/5.jpg" width="350" height="350"/></li>
+        <li><img src="images/6.jpg" width="350" height="350"/></li>
+        <li><img src="images/7.jpg" width="350" height="350"/></li>
+        <li><img src="images/8.jpg" width="350" height="350"/></li>
+        <li><img src="images/9.jpg" width="350" height="350"/></li>
+
+      </ul>
+    </div>
+
+    <!-- Galery mobile, prosta galeria zdiec -->
+    <div class="galery_mobile">
+      <img src="images/6.jpg" width="100" height="100" />
+      <img src="images/4.jpg" width="100" height="100" />
+      <img src="images/9.jpg" width="100" height="100" />
+    </div>
+
+    <div id="circles">
+      <div class="circle_1" data-index="0"></div>
+      <div class="circle_2" data-index="1"></div>
+      <div class="circle_3" data-index="2"></div>
+    </div>
+
+
+  </section>
+  <section id="testimonial">
+    <div class="container clearfix">
+      <div class="title">
+        <h1>Trusted by Thousands</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+      <div class="testimonial_section container">
+        <div class="left_side wow fadeInLeft" data-wow-delay="0.5s">
+          <img src="images/box.png"/>
+          <p>Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying crowded market pivot onboarding.</p>
+          <div class="triangle"></div>
+          <h2><a href="#">Robert Zemeckis</a></h2>
+          <p class="paragraf">Abz Network</p>
+        </div>
+        <div class="middle_side wow fadeInUp" data-wow-delay="0.5s">
+          <img src="images/box.png"/>
+          <p>Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying crowded market pivot onboarding.</p>
+          <div class="triangle"></div>
+          <h2><a href="#">Robert Zemeckis</a></h2>
+          <p class="paragraf">Abz Network</p>
+        </div>
+        <div class="right_side wow fadeInRight" data-wow-delay="0.5s">
+          <img src="images/box.png"/>
+          <p>Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying crowded market pivot onboarding.</p>
+          <div class="triangle"></div>
+          <h2><a href="#">Robert Zemeckis</a></h2>
+          <p class="paragraf">Abz Network</p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section id="bg_photo">
+    <div class="photo">
+      <div class="text_on_photo">
+        <h3 class="wow bounceInLeft" data-wow-delay="0.5s">We Ready to Help You</h3>
+        <h1 class="wow bounceInRight" data-wow-delay="0.5s">Get the Best Solution for Your Tour</h1>
+        <a href="#home">GET STARTED</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <div class="container clearfix">
+      <div class="title">
+        <h1>Contact</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+      <div class="contact_section container clearfix">
+
+        <!-- <?php
+        if ( $_SERVER['REQUEST_METHOD'] == 'GET' ){
+          if ( isset( $_GET['res'] )
+          && isset( $_GET['msg'] ) ){
+
+            $res = $_GET['res'];
+            $msg = $_GET['msg'];
+
+            $color = $res == 1 ? 'green' : 'red';
+            echo( "<div style='color:$color'>$msg</div>" );
+          }
+        }
+        ?> -->
+
+        <form action="" method="">
+          <div class="left wow fadeInLeft" data-wow-delay="0.5s">
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="subject" placeholder="Subject">
+          </div>
+          <div class="right">
+            <input class="wow fadeInRight" data-wow-delay="0.5s" type="message" name="message" placeholder="Message">
+          </div>
+          <div class="button">
+            <input class="wow fadeInRight" data-wow-delay="0.5s" type="submit" value="SUBMIT">
+          </div>
+        </form>
+
+      </div>
+      <div class="map conatiner">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.569767932015!2d19.944023815281895!3d50.05689032352583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b14fb78facd%3A0x88a22b8a9224368f!2sDietla+97%2C+33-332+Krak%C3%B3w!5e0!3m2!1sru!2spl!4v1473776021274" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+  <footer id="the_end">
+    <div class="footer_section">
+      <h1 class="wow bounceIn" data-wow-delay="0.5s">Voyage</h1>
+      <p class="wow bounceInUp" data-wow-delay="0.5s">Copyright © 2016 Travelo . All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+  <script src="js/wow.js"></script>
+  <script src="js/app.js"></script>
+  <script src="jQuery/jquery-ui.min.js"></script>
+
+</body>
+</html>
